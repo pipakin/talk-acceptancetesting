@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css" />
+        <link rel="stylesheet" href="theme/default.css" />
+        <link rel="stylesheet" href="dark.css" />
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+              <section>
+                <h2>Acceptance Testing</h2>
+
+                Using SpecFlow and Selenium in .Net
+              </section>
+              <section>
+                <section>
+                  <h3>Who knows what acceptance testing is?</h3>
+                  (Show of hands!)
+                </section>
+                <section>
+                  In software testing the ISTQB defines acceptance as: formal
+                  testing with respect to user needs, requirements, and business
+                  processes conducted to determine whether a system satisfies
+                  the acceptance criteria and to enable the user, customers or
+                  other authorized entity to determine whether or not to accept
+                  the system. Acceptance testing is also known as user
+                  acceptance testing (UAT), end-user testing, operational
+                  acceptance testing (OAT) or field (acceptance) testing.
+                </section>
+                <section>
+                  TODO: explanation
+                </section>
+              </section>
+              <section>
+                <section>
+                  <h2>Biggest Benefits</h2>
+                  <ul>
+                    <li class="fragment">Product/Dev Communication</li>
+                    <li class="fragment">Living Product Documentation</li>
+                    <li class="fragment">Plays extremely well with Agile Frameworks</li>
+                  </ul>
+                </section>
+              </section>
+              <section>
+                <h2>Let's talk SpecFlow</h2>
+                <p class="fragment">But first...</p>
+              </section>
+              <section>
+                <section>
+                  <h2>Let's talk Gherkin</h2>
+                  <p class="fragment">
+                    Gherkin is the language that Specflow understands. It is a
+                    Business Readable, Domain Specific Language that lets you
+                    describe software’s behaviour without detailing how that
+                    behaviour is implemented.
+                  </p>
+                  <p></p>
+                  <p class="fragment">
+                    Wait, what's a Domain Specific Language?
+                  </p>
+                </section>
+                <section>
+                  A domain-specific language (DSL) is a computer language
+                  specialized to a particular application domain. This is in
+                  contrast to a general-purpose language (GPL), which is broadly
+                  applicable across domains. There are a wide variety of DSLs,
+                  ranging from widely used languages for common domains, such as
+                  HTML for web pages, down to languages used by only one or a
+                  few pieces of software, such as Emacs Lisp for GNU Emacs and
+                  XEmacs.
+                </section>
+                <section>
+                  <i>I do think that the greatest potential benefit of DSLs
+                    comes when business people participate directly in the
+                    writing of the DSL code. The sweet spot, however is in
+                    making DSLs business-readable rather than
+                    business-writeable. If business people are able to look at
+                    the DSL code and understand it, then we can build a deep
+                    and rich communication channel between software development
+                    and the underlying domain. Since this is the Yawning
+                    Crevasse of Doom in software, DSLs have great value if they
+                    can help address it.</i>
+                  <p>-Martin Fowler</p>
+                </section>
+                <section>
+                  A small example:
+                  <pre><code class="gherkin">
+  Feature: Some terse yet descriptive text of what is desired
+    In order to realize a named business value
+    As an explicit system actor
+    I want to gain some beneficial outcome which furthers the goal
+
+    Scenario: Some determinable business situation
+      Given some precondition
+      And some other precondition
+      When some action by the actor
+      And some other action
+      And yet another action
+      Then some testable outcome is achieved
+      And something else we can check happens too
+
+    ...
+                  </code></pre>
+                </section>
+                <section>
+                  <h3>Keywords</h3>
+                  <ul>
+                    <li>Feature: Some terse yet descriptive text of what is desired - starts the feature and gives it a title.</li>
+                    <li>Scenario: Some determinable business situation - starts the scenario, and contains a description of the scenario.</li>
+                  </ul>
+                </section>
+                <section>
+                  <h3>Steps - Given</h3>
+                  The purpose of Given steps is to put the system in a known state before the user (or external system) starts interacting with the system (in the When steps). Avoid talking about user interaction in givens. If you have worked with use cases, givens are your preconditions.
+                </section>
+                <section>
+                  <h3>Steps - When</h3>
+                  The purpose of When steps is to describe the key action the user performs (or, using Robert C. Martin’s metaphor, the state transition).
+                </section>
+                <section>
+                  <h3>Steps - Then</h3>
+                  The purpose of Then steps is to observe outcomes. The observations should be related to the business value/benefit in your feature description. The observations should inspect the output of the system (a report, user interface, message, command output) and not something deeply buried inside it (that has no business value and is instead part of the implementation).
+                </section>
+                <section>
+                  <h3>Tables</h3>
+Tables as arguments to steps are handy for specifying a larger data set - usually as input to a Given or as expected output from a Then.
+
+                  <pre><code class="gherkin">
+Scenario:
+  Given the following people exist:
+    | name  | email           | phone |
+    | Aslak | aslak@email.com | 123   |
+    | Joe   | joe@email.com   | 234   |
+    | Bryan | bryan@email.org | 456   |
+                  </code></pre>
+                </section>
+              </section>
+              <section>
+                <h3>Let's talk Specflow</h3>
+                (for real)
+              </section>
+              <section>
+                <h3>Let's talk Selenium</h3>
+              </section>
+              <section>
+                <h3>Example Scenarios</h3>
+              </section>
+              <section>
+                <h3>Example Steps</h3>
+              </section>
+            </div>
+        </div>
+        <script src="slideshow.js"></script>
+    </body>
+</html>
