@@ -4,7 +4,8 @@
   "description": "Acceptance Testing using SpecFlow, Selenium, and .NET",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gh-pages": "xcopy /E public gh-pages && cd gh-pages && git add . && git commit -m pages && git push origin gh-pages && cd .."
   },
   "keywords": [
     "dnug"
