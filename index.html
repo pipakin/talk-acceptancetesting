@@ -136,17 +136,83 @@ Scenario:
                 </section>
               </section>
               <section>
-                <h3>Let's talk Specflow</h3>
-                (for real)
+                <section>
+                  <h3>Let's talk Specflow</h3>
+                  (for real)
+                </section>
+                <section>
+                  <h4>What is it?</h4>
+                  Specflow is a system for implementing gherkin steps in C#. It
+                  compiles feature files on save and can output tests in
+                  multiple test frameworks (MSTest, nUnit, xUnit, etc).
+                </section>
+                <section>
+                  <h4>Syntax</h4>
+                  Specflow uses Gherkin syntax with very little modifications.
+                  The configuration of step assemblies occurs entirely in the
+                  app.config of the test assemblies.
+                </section>
+                <section>
+                  <h4>Steps</h4>
+                  Steps connect the Gherkin syntax to actual code that excercises
+                  your target application.  Typically steps should be quite short.
+                </section>
+                <section>
+                  <h4>Example</h4>
+                  <pre><code class="cs">[Binding]
+public class ExampleStep
+{
+  [Given("I have navigated to the website")]
+  public void GoToSite()
+  {
+    driver.Navigate().GoToUrl("http://your.site.here/page.html");
+  }
+  [When("I fill out the login form with user (.*) and password (.*)")]
+  public void LoginFormFill(string user, string password)
+  {
+    driver.FindElementById("usr").SendKeys(user);
+    driver.FindElementById("pwd").SendKeys(password);
+  }
+}
+                  </code></pre>
+                </section>
               </section>
               <section>
-                <h3>Let's talk Selenium</h3>
+                <section>
+                  <h3>Let's talk Selenium</h3>
+                </section>
+                <section>
+                  <h4>What is it?</h4>
+                  Selenium is a browser automation system designed to make
+                  automating Web UIs quick and easy.
+                </section>
+                <section>
+                  <h4>Example code</h4>
+                  <pre><code class="C#">using (var driver = new ChromeDriver())
+{
+    // Go to the home page
+    driver.Navigate().GoToUrl("http://testing-ground.scraping.pro/login");
+
+    // Get the page elements
+    var userNameField = driver.FindElementById("usr");
+    var userPasswordField = driver.FindElementById("pwd");
+    var loginButton = driver.FindElementByXPath("//input[@value='Login']");
+
+    // Type user name and password and click the login button
+    userNameField.SendKeys("admin");
+    userPasswordField.SendKeys("12345");
+    loginButton.Click();
+}
+                  </code></pre>
+                </section>
               </section>
               <section>
-                <h3>Example Scenarios</h3>
+                <h1>LIVE CODE!!!one</h1>
               </section>
               <section>
-                <h3>Example Steps</h3>
+                <p>Philip Kin</p>
+                <p>philip@thekinfamily.com</p>
+                <img src="armor.jpg" width=300 />
               </section>
             </div>
         </div>
