@@ -1,5 +1,5 @@
 module.exports = {
-  cmd: "node ./build.js",
+  cmd: "node ./build.js && npm run gh-pages",
   preBuild: function () {
     console.log('This is run **before** the build command');
   },

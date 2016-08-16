@@ -28,7 +28,9 @@
                   acceptance testing (OAT) or field (acceptance) testing.
                 </section>
                 <section>
-                  TODO: explanation
+                  Acceptance testing is essentially a higher level version of
+                  Unit testing. It is an outer loop to TDD's inner loop.
+                  <img src="atdd.png" />
                 </section>
               </section>
               <section>
@@ -37,7 +39,9 @@
                   <ul>
                     <li class="fragment">Product/Dev Communication</li>
                     <li class="fragment">Living Product Documentation</li>
-                    <li class="fragment">Plays extremely well with Agile Frameworks</li>
+                    <li class="fragment">
+                      Plays extremely well with Agile Frameworks
+                    </li>
                   </ul>
                 </section>
               </section>
@@ -105,25 +109,45 @@
                 <section>
                   <h3>Keywords</h3>
                   <ul>
-                    <li>Feature: Some terse yet descriptive text of what is desired - starts the feature and gives it a title.</li>
-                    <li>Scenario: Some determinable business situation - starts the scenario, and contains a description of the scenario.</li>
+                    <li>
+                      Feature: Some terse yet descriptive text of what is
+                      desired - starts the feature and gives it a title.
+                    </li>
+                    <li>
+                      Scenario: Some determinable business situation - starts
+                      the scenario, and contains a description of the scenario.
+                    </li>
                   </ul>
                 </section>
                 <section>
                   <h3>Steps - Given</h3>
-                  The purpose of Given steps is to put the system in a known state before the user (or external system) starts interacting with the system (in the When steps). Avoid talking about user interaction in givens. If you have worked with use cases, givens are your preconditions.
+                  The purpose of Given steps is to put the system in a known
+                  state before the user (or external system) starts interacting
+                  with the system (in the When steps). Avoid talking about user
+                  interaction in givens. If you have worked with use cases,
+                  givens are your preconditions.
                 </section>
                 <section>
                   <h3>Steps - When</h3>
-                  The purpose of When steps is to describe the key action the user performs (or, using Robert C. Martin’s metaphor, the state transition).
+                  The purpose of When steps is to describe the key action the
+                  user performs (or, using Robert C. Martin’s metaphor, the
+                  state transition).
                 </section>
                 <section>
                   <h3>Steps - Then</h3>
-                  The purpose of Then steps is to observe outcomes. The observations should be related to the business value/benefit in your feature description. The observations should inspect the output of the system (a report, user interface, message, command output) and not something deeply buried inside it (that has no business value and is instead part of the implementation).
+                  The purpose of Then steps is to observe outcomes. The
+                  observations should be related to the business value/benefit
+                  in your feature description. The observations should inspect
+                  the output of the system (a report, user interface, message,
+                  command output) and not something deeply buried inside it
+                  (that has no business value and is instead part of the
+                  implementation).
                 </section>
                 <section>
                   <h3>Tables</h3>
-Tables as arguments to steps are handy for specifying a larger data set - usually as input to a Given or as expected output from a Then.
+                  Tables as arguments to steps are handy for specifying a larger
+                  data set - usually as input to a Given or as expected output
+                  from a Then.
 
                   <pre><code class="gherkin">
 Scenario:
